@@ -1,4 +1,4 @@
-name: .NET Core - alternate flow
+name: .NET Core - release flow - on-demand
 
 on:
   push:
