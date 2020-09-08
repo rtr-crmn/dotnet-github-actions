@@ -24,6 +24,12 @@ jobs:
         echo "name: '${{ github.event.inputs.name }}'"
     - run: env
     - run: docker ps
+    - run: docker version
+    - run: curl -L -o ${AGENT_TOOLSDIRECTORY}/kind https://kind.sigs.k8s.io/dl/v0.8.1/kind-linux-amd64 && chmod +x ${AGENT_TOOLSDIRECTORY}/kind
+    - run: kind create cluster
+    - run: docker ps
+
+
     #- uses: actions/checkout@v2
     #- name: Setup .NET Core
       #uses: actions/setup-dotnet@v1
