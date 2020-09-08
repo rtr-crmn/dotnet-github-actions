@@ -2,7 +2,7 @@ name: dotnet-core-release-flow
 
 on:
   push:
-    #branches: [ master ]
+    branches: [ exclude ]
   #pull_request:
     #branches: [ master ]
 
