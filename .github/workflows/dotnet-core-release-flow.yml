@@ -20,7 +20,7 @@ jobs:
 
     steps:
     - run: ls -la
-    - run: echo "name: '${{ github.event.inputs.name }}'"
+    - run: echo "name: ${{ github.event.inputs.name }}"
     - run: env
     - run: docker ps
     #- uses: actions/checkout@v2
