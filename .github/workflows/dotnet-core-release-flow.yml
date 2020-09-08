@@ -25,7 +25,7 @@ jobs:
     - run: env
     - run: docker ps
     - run: docker version
-    - run: kubectl cluster-info
+    - run: find / -name kubectl
     - run: curl -L -o ${AGENT_TOOLSDIRECTORY}/kind https://kind.sigs.k8s.io/dl/v0.8.1/kind-linux-amd64 && chmod +x ${AGENT_TOOLSDIRECTORY}/kind
     - run: kind create cluster
     - run: kubectl cluster-info
