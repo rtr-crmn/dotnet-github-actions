@@ -5,6 +5,13 @@ on:
     branches: [ exclude ]
   #pull_request:
     #branches: [ master ]
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "value"
+        required: true
+        default: "default-name"
+
 
 jobs:
   build:
@@ -13,6 +20,7 @@ jobs:
 
     steps:
     - run: ls -la
+    - run: echo "name: '${{ github.event.inputs.name }}'"
     - run: env
     - run: docker ps
     #- uses: actions/checkout@v2
